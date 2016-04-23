@@ -194,7 +194,7 @@ def build_report(project, build_number):
     return html
 
 
-@route('/projects/<project>/deploy')
+@route('/projects/<project>/deploy', ['GET', 'POST'])
 @auth_basic(check_pass)
 def deploy_project(project):
     try:
