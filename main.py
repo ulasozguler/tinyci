@@ -126,6 +126,7 @@ def check_pass(username, password):
     with open('users', 'r') as f:
         content = f.read().split('\n')
         for u in content:
+            if not u: continue
             u = u.split(',')
             users[u[0]] = u[1]
 
